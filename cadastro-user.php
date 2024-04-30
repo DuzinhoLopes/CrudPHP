@@ -14,7 +14,6 @@
                 <label for="user" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="user" name="user" required>
                 <?php
-                // Verifica se há uma mensagem de erro específica para o nome do usuário
                 if(isset($_GET['error']) && strpos($_GET['error'], "Nome de usuário") !== false) {
                     echo "<span id='user-error' class='text-danger'>Nome de usuário já existe.</span>";
                 }
@@ -24,7 +23,6 @@
                 <label for="email" class="form-label">E-mail</label>
                 <input type="email" class="form-control" id="email" name="email" required>
                 <?php
-                // Verifica se há uma mensagem de erro específica para o e-mail
                 if(isset($_GET['error']) && strpos($_GET['error'], "E-mail") !== false) {
                     echo "<span id='email-error' class='text-danger'>E-mail já está em uso.</span>";
                 }

@@ -10,7 +10,6 @@
           </div>
           <div class="card-body">
             <?php
-            // Verifica se há uma mensagem de erro na URL
             if(isset($_GET['error'])) {
                 $error_message = urldecode($_GET['error']);
                 echo "<div id='auth-error' class='alert alert-danger'>$error_message</div>";

@@ -15,7 +15,6 @@ $logado = $_SESSION["id_user"];
 
 <section class="container mt-4 veiculos">
   <?php
-  // Verificar se há mensagens de erro ou sucesso na URL
   if (isset($_GET['error'])) {
     $error_message = $_GET['error'];
     echo "<div id='error-message' class='alert alert-danger'>$error_message</div>";

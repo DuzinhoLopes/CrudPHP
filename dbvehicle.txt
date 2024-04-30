@@ -5,7 +5,6 @@ CREATE TABLE IF NOT EXISTS `dbvehicle`.`user` (
   `iduser` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(245) NULL,
   `email` VARCHAR(150) NULL,
-  `level` INT NULL,
   `password` VARCHAR(100) NULL,
   PRIMARY KEY (`iduser`),
   UNIQUE INDEX `iduser_UNIQUE` (`iduser` ASC) VISIBLE,
@@ -18,7 +17,6 @@ CREATE TABLE IF NOT EXISTS `dbvehicle`.`vehicle` (
   `year` VARCHAR(45) NULL,
   `value` VARCHAR(45) NULL,
   `color` VARCHAR(45) NULL,
-  `cod_user` VARCHAR(45) NULL,
   `user_iduser` INT NOT NULL,
   PRIMARY KEY (`idvehicle`),
   UNIQUE INDEX `idvehicle_UNIQUE` (`idvehicle` ASC) VISIBLE,
@@ -29,9 +27,3 @@ CREATE TABLE IF NOT EXISTS `dbvehicle`.`vehicle` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
